@@ -8,10 +8,21 @@ Hinweis: Implementieren Sie Ihre Lösung als wechselseitige Rekursion. Definiere
 # Definieren Sie Ihre eigene(n) Funktion(en) inklusive Parameter und Rückgabewerte.
 # Achten Sie dabei darauf, dass der/die Funktionsaufruf/e der Zelle(n) unterhalb funktioniert/funktionieren.
 
+# def is_odd(n):
+#     if n == 0:
+#         return False
+#     return not is_odd(n-1)
+
+
 def is_odd(n):
     if n == 0:
         return False
-    return not is_odd(n-1)
+    return is_even(n - 1)
+
+def is_even(n):
+    if n == 0:
+        return True
+    return is_odd(n - 1)
 
 # Weisen Sie der untenstehenden Variable den Wert True zu, sobald Sie die Aufgabe erfolgreich erledigt haben!
 ​
